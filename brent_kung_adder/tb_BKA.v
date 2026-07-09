@@ -1,5 +1,5 @@
 `timescale 1ns/1ps
-// `include "/brent_kung_adder/brent_kung_adder.v"
+`include "brent_kung_adder/brent_kung_adder.v"
 
 module tb_BKA;
 
