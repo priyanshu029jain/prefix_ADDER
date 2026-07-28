@@ -1,0 +1,96 @@
+Warning: No PCF file specified; IO pins will be placed automatically
+
+Info: Packing constants..
+Info: Packing IOs..
+Info: Packing LUT-FFs..
+Info:       33 LCs used as LUT4 only
+Info:        0 LCs used as LUT4 and DFF
+Info: Packing non-LUT FFs..
+Info:        0 LCs used as DFF only
+Info: Packing carries..
+Info:        0 LCs used as CARRY only
+Info: Packing indirect carry+LUT pairs...
+Info:        0 LUTs merged into carry LCs
+Info: Packing RAMs..
+Info: Placing PLLs..
+Info: Packing special functions..
+Info: Packing PLLs..
+Info: Promoting globals..
+Info: Constraining chains...
+Info:        0 LCs used to legalise carry chains.
+Info: Checksum: 0x5ef4080d
+
+Info: Device utilisation:
+Info: 	         ICESTORM_LC:      35/   7680     0%
+Info: 	        ICESTORM_RAM:       0/     32     0%
+Info: 	               SB_IO:      26/    256    10%
+Info: 	               SB_GB:       0/      8     0%
+Info: 	        ICESTORM_PLL:       0/      2     0%
+Info: 	         SB_WARMBOOT:       0/      1     0%
+
+Info: Placed 0 cells based on constraints.
+Info: Creating initial analytic placement for 33 cells, random placement wirelen = 1716.
+Info:     at initial placer iter 0, wirelen = 619
+Info:     at initial placer iter 1, wirelen = 614
+Info:     at initial placer iter 2, wirelen = 612
+Info:     at initial placer iter 3, wirelen = 614
+Info: Running main analytical placer, max placement attempts per cell = 10000.
+Info:     at iteration #1, type ICESTORM_LC: wirelen solved = 612, spread = 628, legal = 639; time = 0.00s
+Info: HeAP Placer Time: 0.01s
+Info:   of which solving equations: 0.00s
+Info:   of which spreading cells: 0.00s
+Info:   of which strict legalisation: 0.00s
+
+Info: Running simulated annealing placer for refinement.
+Info:   at iteration #1: temp = 0.000000, timing cost = 0, wirelen = 639
+Info:   at iteration #5: temp = 0.000000, timing cost = 0, wirelen = 410
+Info:   at iteration #10: temp = 0.000000, timing cost = 0, wirelen = 405
+Info:   at iteration #14: temp = 0.000000, timing cost = 0, wirelen = 401 
+Info: SA placement time 0.01s
+
+Info: No Fmax available; no interior timing paths found in design.
+Info: Checksum: 0x39d821f8
+
+Info: Routing..
+Info: Setting up routing queue.
+Info: Routing 119 arcs.
+Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
+Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
+Info:        127 |        6        121 |    6   121 |         0|       0.02       0.02|
+Info: Routing complete.
+Info: Router1 time 0.02s
+Info: Checksum: 0x3df64692
+
+Info: Critical path report for cross-domain path '<async>' -> '<async>':
+Info:       type curr  total name
+Info:     source  0.00  0.00 Source B[1]$sb_io.D_IN_0
+Info:    routing  1.28  1.28 Net B[1]$SB_IO_IN (0,14) -> (1,11)
+Info:                          Sink Cin_SB_LUT4_I0_I3_SB_LUT4_O_LC.I2
+Info:                          Defined in:
+Info:                               kogge_stone_adder/kogge_stone_adder.v:4.18-4.19
+Info:      logic  0.38  1.66 Source Cin_SB_LUT4_I0_I3_SB_LUT4_O_LC.O
+Info:    routing  0.59  2.25 Net Cin_SB_LUT4_I0_I3[3] (1,11) -> (1,11)
+Info:                          Sink Cin_SB_LUT4_I0_LC.I3
+Info:                          Defined in:
+Info:                               /home/lenovopriya029jain_vlsi/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:      logic  0.31  2.56 Source Cin_SB_LUT4_I0_LC.O
+Info:    routing  1.53  4.09 Net Cin_SB_LUT4_I0_O[3] (1,11) -> (10,11)
+Info:                          Sink SUM_SB_LUT4_O_I3_SB_LUT4_O_LC.I3
+Info:                          Defined in:
+Info:                               /home/lenovopriya029jain_vlsi/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:      logic  0.31  4.41 Source SUM_SB_LUT4_O_I3_SB_LUT4_O_LC.O
+Info:    routing  1.27  5.68 Net Cout_SB_LUT4_O_I0[3] (10,11) -> (13,12)
+Info:                          Sink SUM_SB_LUT4_O_LC.I3
+Info:                          Defined in:
+Info:                               /home/lenovopriya029jain_vlsi/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:      logic  0.31  6.00 Source SUM_SB_LUT4_O_LC.O
+Info:    routing  2.57  8.57 Net SUM[4]$SB_IO_OUT (13,12) -> (33,11)
+Info:                          Sink SUM[4]$sb_io.D_OUT_0
+Info:                          Defined in:
+Info:                               kogge_stone_adder/kogge_stone_adder.v:6.18-6.21
+Info: 1.32 ns logic, 7.25 ns routing
+
+Info: No Fmax available; no interior timing paths found in design.
+1 warning, 0 errors
+
+Info: Program finished normally.
