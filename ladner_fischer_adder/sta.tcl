@@ -25,7 +25,7 @@ puts "                TIMING REPORT (CRITICAL PATH)          "
 puts "========================================================"
 
 # -from [all_inputs] -to [all_outputs] forces analysis of input-to-output paths
-report_checks -from [all_inputs] -to [all_outputs] -path_delay max -digits 4
+report_checks -from [all_inputs] -to [all_outputs] -path_delay max -digits 4 > ladner_fischer_adder/timing_report.txt
 
 # Alternatively, report maximum delay directly:
 # report_max_delay -from [all_inputs] -to [all_outputs]
@@ -36,6 +36,6 @@ report_checks -from [all_inputs] -to [all_outputs] -path_delay max -digits 4
 puts "\n========================================================"
 puts "                POWER CONSUMPTION REPORT               "
 puts "========================================================"
-report_power
+report_power > ladner_fischer_adder/power_report.txt
 
 exit

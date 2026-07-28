@@ -1,0 +1,31 @@
+
+12. Printing statistics.
+
+=== han_carlson_adder ===
+
+   Number of wires:                 26
+   Number of wire bits:             47
+   Number of public wires:           5
+   Number of public wire bits:      26
+   Number of ports:                  5
+   Number of port bits:             26
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 30
+     sky130_fd_sc_hd__a21oi_1        1
+     sky130_fd_sc_hd__a31o_1         1
+     sky130_fd_sc_hd__a31oi_1        1
+     sky130_fd_sc_hd__and2_0         2
+     sky130_fd_sc_hd__lpflow_inputiso1p_1      2
+     sky130_fd_sc_hd__maj3_1         5
+     sky130_fd_sc_hd__nand2_1        2
+     sky130_fd_sc_hd__nand2b_1       1
+     sky130_fd_sc_hd__nor2_1         2
+     sky130_fd_sc_hd__o21a_1         1
+     sky130_fd_sc_hd__o221ai_1       1
+     sky130_fd_sc_hd__xnor2_1       11
+
+   Chip area for module '\han_carlson_adder': 228.969600
+     of which used for sequential elements: 0.000000 (0.00%)
+

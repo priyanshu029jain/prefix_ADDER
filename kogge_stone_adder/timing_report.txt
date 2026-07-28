@@ -1,0 +1,32 @@
+Startpoint: B[0] (input port clocked by clk)
+Endpoint: SUM[7] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 v input external delay
+   0.0000    0.0000 v B[0] (in)
+   0.3848    0.3848 v _44_/X (sky130_fd_sc_hd__maj3_1)
+   0.3305    0.7154 v _48_/X (sky130_fd_sc_hd__a221o_1)
+   0.1511    0.8665 ^ _51_/Y (sky130_fd_sc_hd__o211ai_1)
+   0.2123    1.0788 ^ _67_/X (sky130_fd_sc_hd__a311o_1)
+   0.0963    1.1751 v _71_/Y (sky130_fd_sc_hd__a31oi_1)
+   0.1258    1.3009 v _72_/Y (sky130_fd_sc_hd__xnor2_1)
+   0.0006    1.3015 v SUM[7] (out)
+             1.3015   data arrival time
+
+  10.0000   10.0000   clock clk (rise edge)
+   0.0000   10.0000   clock network delay (ideal)
+   0.0000   10.0000   clock reconvergence pessimism
+   0.0000   10.0000   output external delay
+            10.0000   data required time
+-------------------------------------------------------------
+            10.0000   data required time
+            -1.3015   data arrival time
+-------------------------------------------------------------
+             8.6985   slack (MET)
+
+

@@ -16,7 +16,7 @@ abc -liberty sky130.lib
 opt_clean -purge
 
 # Print Area & Gate Count report directly in terminal
-stat -liberty sky130.lib
+tee -o han_carlson_adder/area_report.txt stat -liberty sky130.lib
 
 # Save the synthesized gate-level netlist (used later for STA timing/power)
 write_verilog han_carlson_adder/han_carlson_mapped.v

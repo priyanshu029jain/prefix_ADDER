@@ -10,32 +10,18 @@ link_design brent_kung_adder
 # Create a virtual clock for reference
 create_clock -name clk -period 10.0
 
-# ------------------------------------------------------------------
-# CRITICAL FIX FOR COMBINATIONAL DESIGNS:
 # Constrain input and output ports relative to the virtual clock
-# ------------------------------------------------------------------
 set_input_delay -clock clk 0 [all_inputs]
 set_output_delay -clock clk 0 [all_outputs]
 
 # ------------------------------------------------------------------
-# 1. TIMING REPORT (Combinational Path Delay)
+# 1. TIMING REPORT (Redirect output using >)
 # ------------------------------------------------------------------
-puts "\n========================================================"
-puts "                TIMING REPORT (CRITICAL PATH)          "
-puts "========================================================"
-
-# -from [all_inputs] -to [all_outputs] forces analysis of input-to-output paths
-report_checks -from [all_inputs] -to [all_outputs] -path_delay max -digits 4
-
-# Alternatively, report maximum delay directly:
-# report_max_delay -from [all_inputs] -to [all_outputs]
+report_checks -from [all_inputs] -to [all_outputs] -path_delay max -digits 4 > brent_kung_adder/timing_report.txt
 
 # ------------------------------------------------------------------
-# 2. POWER REPORT
+# 2. POWER REPORT (Redirect output using >)
 # ------------------------------------------------------------------
-puts "\n========================================================"
-puts "                POWER CONSUMPTION REPORT               "
-puts "========================================================"
-report_power
+report_power > brent_kung_adder/power_report.txt
 
 exit

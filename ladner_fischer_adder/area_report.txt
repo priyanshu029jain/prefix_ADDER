@@ -1,0 +1,21 @@
+
+12. Printing statistics.
+
+=== ladner_fischer_adder ===
+
+   Number of wires:                 21
+   Number of wire bits:             42
+   Number of public wires:           5
+   Number of public wire bits:      26
+   Number of ports:                  5
+   Number of port bits:             26
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 25
+     sky130_fd_sc_hd__maj3_1         9
+     sky130_fd_sc_hd__xnor2_1       16
+
+   Chip area for module '\ladner_fischer_adder': 230.220800
+     of which used for sequential elements: 0.000000 (0.00%)
+
